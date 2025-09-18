@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0.01em;
+  color: #1d270d;
+}
+
+body {
+  background-color: #fcfbfa;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e7e8;
+}
+
+.header h1 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+}
+
+.header img {
+  width: 55px;
+  margin: 1.5rem;
+  margin-right: 2rem;
+}
+
+.search-bar {
+  background: white;
+  border-bottom: 1px solid #e6e7e8;
+}
+
+.search-bar h3 {
+  font-weight: 300;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.5rem;
+  margin: 1.5rem;
+  background-color: #f4f2ee;
+  display: inline-block;
+  border-radius: 200px;
+}
+
+.property-list img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 1rem;
+}
+
+.property-list ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 3rem;
+}
+
+.property-list li {
+  background-color: white !important;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.333% - 3rem);
+  border: 1px solid #1d270d;
+  height: 300px;
+  padding: 2rem;
+  padding-bottom: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.property-list li h3 {
+  font-size: 1rem;
+}
+
+.property-list li p {
+  font-size: 0.9rem;
+}
+
+.single-property img {
+  width: 450px;
+  height: 300px;
+}
