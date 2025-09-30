@@ -1,0 +1,100 @@
+.search-bar {
+  background: white;
+  border-bottom: 1px solid #e6e7e8;
+  padding: 0.5rem 1rem;
+}
+
+.filter-controls {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-controls button,
+.filter-controls .dropdown {
+  cursor: pointer;
+  background-color: #f4f2ee;
+  height: 35px;
+  width: 170px;
+  border-radius: 200px;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.filter-controls button.selected {
+  background-color: #265419;
+  color: white;
+}
+
+.filter-controls button:hover,
+.filter-controls .dropdown:hover {
+  background-color: #265419;
+  color: white;
+}
+
+.dropdown:hover .dropdown-label {
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  min-width: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+.filter-controls button.submit-button {
+  background-color: #bbb7d3;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-controls button.submit-button:hover {
+  background-color: #9a96be;
+  color: #1d270d;
+}
+
+.dropdown-label {
+  font-weight: normal;
+  font-size: 0.8rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 18px;
+}

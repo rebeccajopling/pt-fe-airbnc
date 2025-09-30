@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import BackButton from "./BackButton";
 
 function SingleProperty() {
   const { id } = useParams();
@@ -26,10 +27,17 @@ function SingleProperty() {
 
   return (
     <div className="single-property">
+      <BackButton />
       <h2>{property.name}</h2>
       <p>{property.location}</p>
       <img src={property.image_url} alt={property.name} />
       <p>{property.description}</p>
+      <p>Host: {property.host_name}</p>
+      <img
+        src={property.avatar}
+        alt={property.host_name}
+        className="host-avatar"
+      />
     </div>
   );
 }
