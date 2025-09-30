@@ -11,13 +11,6 @@ function SearchBar({ onSearch }) {
   const handleSearch = () => {
     const queryParams = [];
 
-    if (selectedPropertyTypes.length > 0) {
-      const typeParams = selectedPropertyTypes.map(
-        (type) => `property_type=${type}`
-      );
-      queryParams.push(...typeParams);
-    }
-
     if (sortOrder) {
       queryParams.push("sort=cost_per_night");
 
@@ -26,6 +19,13 @@ function SearchBar({ onSearch }) {
       } else if (sortOrder === "low-high") {
         queryParams.push("order=ascending");
       }
+    }
+
+    if (selectedPropertyTypes.length > 0) {
+      const typeParams = selectedPropertyTypes.map(
+        (type) => `property_type=${type}`
+      );
+      queryParams.push(...typeParams);
     }
 
     if (priceRange.min) {
@@ -49,35 +49,40 @@ function SearchBar({ onSearch }) {
       }}
     >
       <div className="filter-controls">
-        <p>SORT:</p>
-        <button
-          type="button"
-          onClick={() => setSortOrder("high-low")}
-          className={sortOrder === "high-low" ? "selected" : ""}
-        >
-          Price High-Low
-        </button>
+        <div className="sort-row">
+          <p>SORT:</p>
 
-        <button
-          type="button"
-          onClick={() => setSortOrder("low-high")}
-          className={sortOrder === "low-high" ? "selected" : ""}
-        >
-          Price Low-High
-        </button>
+          <button
+            type="button"
+            onClick={() => setSortOrder("high-low")}
+            className={sortOrder === "high-low" ? "selected" : ""}
+          >
+            Price High-Low
+          </button>
 
-        <p>FILTER:</p>
+          <button
+            type="button"
+            onClick={() => setSortOrder("low-high")}
+            className={sortOrder === "low-high" ? "selected" : ""}
+          >
+            Price Low-High
+          </button>
+        </div>
 
-        <PropertyTypeDDM
-          selectedTypes={selectedPropertyTypes}
-          setSelectedTypes={setSelectedPropertyTypes}
-        />
+        <div className="filter-row">
+          <p>FILTER:</p>
 
-        <PriceDDM priceRange={priceRange} setPriceRange={setPriceRange} />
+          <PropertyTypeDDM
+            selectedTypes={selectedPropertyTypes}
+            setSelectedTypes={setSelectedPropertyTypes}
+          />
 
-        <button type="submit" className="submit-button">
-          {"\u2192"}
-        </button>
+          <PriceDDM priceRange={priceRange} setPriceRange={setPriceRange} />
+
+          <button type="submit" className="submit-button">
+            {"\u2192"}
+          </button>
+        </div>
       </div>
     </form>
   );

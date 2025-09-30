@@ -4,11 +4,22 @@
   padding: 0.5rem 1rem;
 }
 
-.filter-controls {
+.sort-row,
+.filter-row {
+  padding-left: 20px;
   display: flex;
-  height: 90px;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sort-row {
+  padding-top: 20px;
+}
+
+.filter-row {
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .filter-controls button,

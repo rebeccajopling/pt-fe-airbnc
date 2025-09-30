@@ -36,7 +36,7 @@ function SingleProperty() {
       <img
         src={property.avatar}
         alt={property.host_name}
-        className="host-avatar"
+        className="user-avatar"
       />
     </div>
   );

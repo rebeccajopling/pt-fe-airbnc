@@ -10,9 +10,12 @@ function PropertiesList() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    console.log("Fetching properties with query:", searchQuery);
+    const url = searchQuery
+      ? `/api/properties?${searchQuery}`
+      : `/api/properties`;
+
     axios
-      .get(`/api/properties?${searchQuery}`)
+      .get(url)
       .then((response) => {
         const propertyList = response.data.properties.map(
           ({ property_id, name, location, price_per_night, image_url }) => ({
