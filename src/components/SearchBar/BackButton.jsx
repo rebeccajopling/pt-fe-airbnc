@@ -4,8 +4,8 @@ function BackButton() {
   return (
     <div className="search-bar">
       <h3>
-        <Link to="/" className="back-link">
-          {"\u2190"} All Properties
+        <Link to="/users" className="back-link">
+          {"\u2190"} All Users
         </Link>
       </h3>
     </div>

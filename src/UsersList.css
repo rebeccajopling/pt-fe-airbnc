@@ -1,0 +1,38 @@
+.users-list {
+  margin: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.users-list li {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.333% - 3rem);
+  margin: 1rem 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+@media (max-width: 768px) {
+  .users-list li {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .users-list li {
+    flex: 0 0 100%;
+  }
+}

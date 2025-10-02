@@ -13,78 +13,9 @@ body {
   background-color: #fcfbfa;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #e6e7e8;
-}
-
-.header h1 {
-  font-weight: 600;
-  font-size: 1.6rem;
-  margin-left: 2rem;
-}
-
-.header img {
-  width: 55px;
-  margin: 1.5rem;
-  margin-right: 2rem;
-}
-
-.property-list img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  margin: 1rem auto;
-}
-
-.property-list a {
-  text-decoration: none;
-}
-
-.property-list ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin: 3rem;
-}
-
-.property-list li {
-  background-color: white !important;
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 calc(33.333% - 3rem);
-  border: 1px solid #1d270d;
-  height: 340px;
-  padding: 2rem;
-  padding-bottom: 2.5rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.property-list li h3 {
-  font-size: 1rem;
-}
-
-.property-list li p {
-  font-size: 0.9rem;
-}
-
 .single-property img {
   width: 450px;
   height: 300px;
-}
-
-.user-avatar {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  object-fit: cover;
-  filter: grayscale(100%);
 }
 
 .property-view {

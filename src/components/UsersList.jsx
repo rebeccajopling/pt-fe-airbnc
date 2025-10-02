@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import BackButton from "./BackButton";
 import axios from "axios";
+import { Link } from "react-router";
+import "../UsersList.css";
 
 function UsersList() {
   const [allUsers, setAllUsers] = useState([]);
@@ -34,9 +35,8 @@ function UsersList() {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="users-list">
-      <BackButton />
-      <ul>
+    <div>
+      <ul className="users-list">
         {allUsers.map((user) => {
           let hostLabel = "";
           if (user.is_host) {
@@ -45,15 +45,17 @@ function UsersList() {
 
           return (
             <li key={user.user_id}>
-              <p>
-                {user.first_name} {user.surname}
-                {hostLabel}
-              </p>
-              <img
-                src={user.avatar}
-                alt={`${user.first_name}'s avatar`}
-                className="user-avatar"
-              />
+              <Link to={`/users/${user.user_id}`}>
+                <p>
+                  {user.first_name} {user.surname}
+                  {hostLabel}
+                </p>
+                <img
+                  src={user.avatar}
+                  alt={`${user.first_name}'s avatar`}
+                  className="user-avatar"
+                />
+              </Link>
             </li>
           );
         })}

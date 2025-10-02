@@ -1,0 +1,41 @@
+.property-list img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 1rem auto;
+}
+
+.property-list a {
+  text-decoration: none;
+}
+
+.property-list ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 3rem;
+}
+
+.property-list li {
+  background-color: white !important;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.333% - 3rem);
+  border: 1px solid #1d270d;
+  height: 340px;
+  padding: 2rem;
+  padding-bottom: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.property-list li h3 {
+  font-size: 1rem;
+}
+
+.property-list li p {
+  font-size: 0.9rem;
+}
