@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import BackButton from "./SearchBar/BackButton";
+import "../SingleUser.css";
 
 function SingleUser({ setSelectedUser }) {
   const { id } = useParams();
@@ -29,17 +29,18 @@ function SingleUser({ setSelectedUser }) {
 
   return (
     <div className="single-user">
-      <BackButton />
-      <h2>
-        {user.first_name} {user.surname}
-      </h2>
+      <div className="user-info">
+        <p className="single-user-name">
+          {user.first_name} {user.surname}
+        </p>
+        <p>Email: {user.email}</p>
+        <p>Phone: {user.phone_number}</p>
+      </div>
       <img
         src={user.avatar}
         alt={`${user.first_name}'s avatar`}
-        className="user-avatar"
+        className="single-user-avatar"
       />
-      <p>Email: {user.email}</p>
-      <p>Phone: {user.phone_number}</p>
     </div>
   );
 }

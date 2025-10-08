@@ -46,15 +46,15 @@ function UsersList() {
           return (
             <li key={user.user_id}>
               <Link to={`/users/${user.user_id}`}>
-                <p>
-                  {user.first_name} {user.surname}
-                  {hostLabel}
-                </p>
                 <img
                   src={user.avatar}
                   alt={`${user.first_name}'s avatar`}
                   className="user-avatar"
                 />
+                <p>
+                  {user.first_name} {user.surname}
+                  {hostLabel}
+                </p>
               </Link>
             </li>
           );

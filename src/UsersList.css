@@ -17,9 +17,14 @@
   text-align: center;
 }
 
+.users-list p {
+  margin-top: 10px;
+  color: #16332f;
+}
+
 .user-avatar {
-  width: 100px;
-  height: 100px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   object-fit: cover;
   filter: grayscale(100%);

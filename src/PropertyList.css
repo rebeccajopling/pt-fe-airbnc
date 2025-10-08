@@ -68,6 +68,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .property-list ul {
+    margin: 0.75rem 4rem;
+  }
+}
+
 @media (max-width: 450px) {
   .property-list::before {
     height: 360px;
@@ -77,11 +83,5 @@
 @media (max-width: 425px) {
   .property-list::before {
     height: 410px;
-  }
-}
-
-@media (max-width: 480px) {
-  .property-list ul {
-    margin: 0.75rem 4rem;
   }
 }
