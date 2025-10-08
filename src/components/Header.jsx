@@ -9,14 +9,17 @@ function Header({ selectedUser }) {
         <h1>airbnc</h1>
       </Link>
       <div className="user-section">
+        <img
+          className="header-icon"
+          src={selectedUser ? selectedUser.avatar : userIcon}
+          alt="user-icon"
+        />
+        <p className="user-name">
+          {selectedUser ? selectedUser.first_name : "USER"}
+        </p>
         <Link to="/users">
-          <img
-            className="header-icon"
-            src={selectedUser ? `${selectedUser.avatar}` : userIcon}
-            alt="user-icon"
-          />
+          <p className="change-user">CHANGE USER</p>
         </Link>
-        <p>{selectedUser ? `${selectedUser.first_name}` : "CHANGE USER"}</p>
       </div>
     </div>
   );

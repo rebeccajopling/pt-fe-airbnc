@@ -46,12 +46,14 @@ function PropertiesList() {
       <ul>
         {properties.map((property) => (
           <li key={property.id}>
-            <Link to={`properties/${property.id}`}>
-              <h3>{property.name}</h3>
-              <img src={property.image_url} alt={property.name} />
-              <p>{property.location}</p>
-              <p>£{property.price_per_night} per night</p>
-              <p className="property-view">View</p>
+            <img src={property.image_url} alt={property.name} />
+            <p className="property-name">{property.name}</p>
+            <p>
+              {property.location} &nbsp;&middot;&nbsp; £
+              {property.price_per_night} per night
+            </p>
+            <Link to={`properties/${property.id}`} className="property-view">
+              View Property
             </Link>
           </li>
         ))}

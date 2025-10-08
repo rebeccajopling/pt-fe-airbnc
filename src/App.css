@@ -5,28 +5,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Plus Jakarta Sans", sans-serif;
-  letter-spacing: 0.01em;
-  color: #1d270d;
-}
-
-body {
-  background-color: #fcfbfa;
 }
 
 .single-property img {
   width: 450px;
   height: 300px;
-}
-
-.property-view {
-  color: #265419;
-  background-color: #ceefee;
-  margin-top: 10px;
-  height: 28px;
-  width: 100px;
-  line-height: 27px;
-  border-radius: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: bold;
 }

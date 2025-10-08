@@ -5,10 +5,22 @@ import SingleProperty from "./components/SingleProperty";
 import UsersList from "./components/UsersList";
 import SingleUser from "./components/SingleUser";
 import { Routes, Route } from "react-router";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function App() {
   const [selectedUser, setSelectedUser] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("/api/users/1")
+      .then((response) => {
+        setSelectedUser(response.data.user);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
   return (
     <div>

@@ -48,40 +48,42 @@ function SearchBar({ onSearch }) {
         handleSearch();
       }}
     >
-      <div className="filter-controls">
-        <div className="sort-row">
-          <p>SORT:</p>
+      <div className="filter-controls-row">
+        <div className="sort-section">
+          <p className="label">SORT:</p>
+          <div className="controls-group">
+            <button
+              type="button"
+              onClick={() => setSortOrder("high-low")}
+              className={sortOrder === "high-low" ? "selected" : ""}
+            >
+              Price High-Low
+            </button>
 
-          <button
-            type="button"
-            onClick={() => setSortOrder("high-low")}
-            className={sortOrder === "high-low" ? "selected" : ""}
-          >
-            Price High-Low
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setSortOrder("low-high")}
-            className={sortOrder === "low-high" ? "selected" : ""}
-          >
-            Price Low-High
-          </button>
+            <button
+              type="button"
+              onClick={() => setSortOrder("low-high")}
+              className={sortOrder === "low-high" ? "selected" : ""}
+            >
+              Price Low-High
+            </button>
+          </div>
         </div>
 
-        <div className="filter-row">
-          <p>FILTER:</p>
+        <div className="filter-section">
+          <p className="label">FILTER:</p>
+          <div className="controls-group">
+            <PropertyTypeDDM
+              selectedTypes={selectedPropertyTypes}
+              setSelectedTypes={setSelectedPropertyTypes}
+            />
 
-          <PropertyTypeDDM
-            selectedTypes={selectedPropertyTypes}
-            setSelectedTypes={setSelectedPropertyTypes}
-          />
+            <PriceDDM priceRange={priceRange} setPriceRange={setPriceRange} />
 
-          <PriceDDM priceRange={priceRange} setPriceRange={setPriceRange} />
-
-          <button type="submit" className="submit-button">
-            {"\u2192"}
-          </button>
+            <button type="submit" className="submit-button">
+              {"\u2192"}
+            </button>
+          </div>
         </div>
       </div>
     </form>

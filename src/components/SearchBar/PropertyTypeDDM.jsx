@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./SearchBar.css";
 
 function PropertyTypeDDM({ selectedTypes, setSelectedTypes }) {
   const [propertyTypes, setPropertyTypes] = useState([]);
@@ -21,7 +22,7 @@ function PropertyTypeDDM({ selectedTypes, setSelectedTypes }) {
 
   return (
     <div className="dropdown">
-      <span className="dropdown-label">Property Type ↓</span>
+      <span className="dropdown-label">Property Type &nbsp; ↓</span>
       <div className="dropdown-content">
         {propertyTypes.map((type) => (
           <label key={type.property_type} className="dropdown-item">

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./SearchBar.css";
 
 function PriceDDM({ priceRange, setPriceRange }) {
   const handleMinPriceChange = (e) => {
@@ -20,7 +21,7 @@ function PriceDDM({ priceRange, setPriceRange }) {
 
   return (
     <div className="dropdown">
-      <span className="dropdown-label">Price Range ↓</span>
+      <span className="dropdown-label">Price Range &nbsp; ↓</span>
       <div className="dropdown-content">
         <label className="dropdown-item">
           Min Price:
