@@ -1,5 +1,5 @@
 .single-user {
-  margin: 2rem 4rem;
+  margin: 0rem 4rem;
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
@@ -9,7 +9,7 @@
 
 .single-user-info-box {
   background-color: #2e4845;
-  padding: 4rem;
+  padding: 3.5rem;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -27,7 +27,7 @@
 }
 
 .single-user h2 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.25rem;
   letter-spacing: 0.015rem;
   margin-bottom: 1rem;
@@ -40,8 +40,8 @@
 }
 
 .single-user-avatar {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   filter: grayscale(100%);
