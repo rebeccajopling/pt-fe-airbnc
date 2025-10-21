@@ -9,10 +9,10 @@ function UsersList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`/api/users`)
-      .then((response) => {
-        const usersList = response.data.users.map(
+    const fetchUsers = async () => {
+      try {
+        const usersResponse = await axios.get(`/api/users`);
+        const usersList = usersResponse.data.users.map(
           ({ user_id, first_name, surname, is_host, avatar }) => ({
             user_id,
             first_name,
@@ -23,12 +23,13 @@ function UsersList() {
         );
         setAllUsers(usersList);
         setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Error fetching users:", err);
         setError("Something went wrong while fetching users.");
         setLoading(false);
-      });
+      }
+    };
+    fetchUsers();
   }, []);
 
   if (loading) return <div>Loading users...</div>;

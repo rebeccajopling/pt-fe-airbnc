@@ -58,9 +58,66 @@
 .user-properties-section h3 {
   color: #16332f;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 0.015rem;
+}
+
+.reviews-list {
+  margin-bottom: 2rem;
+}
+
+.user-reviews-section h3 {
+  margin-top: 2rem;
   margin-bottom: 1rem;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 0.65rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  color: #16332f;
+  background-color: #ceefee;
+  border-radius: 200px;
+  padding: 0.5rem 1rem;
+}
+
+.user-review-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  border-top: 1.5px solid #ceefee;
+  padding: 1rem 0;
+  margin: 0.25rem 0;
+}
+
+.user-review-item:last-child {
+  border-bottom: 1.5px solid #ceefee;
+}
+
+.review-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-content h4 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.review-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.review-date {
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
 }
 
 @media (max-width: 480px) {
@@ -86,5 +143,9 @@
   .user-properties-list {
     flex-direction: column;
     align-items: center;
+  }
+
+  .user-review-item {
+    align-items: flex-start;
   }
 }

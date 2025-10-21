@@ -24,7 +24,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 3rem 4rem;
-  column-gap: 3rem;
+  column-gap: 2rem;
   position: relative;
   z-index: 1;
   justify-content: center;
@@ -70,18 +70,36 @@
 
 @media (max-width: 480px) {
   .property-list ul {
-    margin: 0.75rem 4rem;
+    margin: 2rem 1rem;
+  }
+
+  .property-list li {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
   }
 }
 
 @media (max-width: 450px) {
   .property-list::before {
-    height: 360px;
+    height: 375px;
   }
 }
 
 @media (max-width: 425px) {
   .property-list::before {
-    height: 410px;
+    height: 425px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .property-list img {
+    width: 265px;
+    height: 265px;
+  }
+
+  .property-list ul {
+    margin: 3rem 7rem;
   }
 }

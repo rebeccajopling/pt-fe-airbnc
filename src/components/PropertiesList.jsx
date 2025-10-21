@@ -15,10 +15,10 @@ function PropertiesList() {
       ? `/api/properties?${searchQuery}`
       : `/api/properties`;
 
-    axios
-      .get(url)
-      .then((response) => {
-        const propertyList = response.data.properties.map(
+    const fetchProperties = async () => {
+      try {
+        const propertyResponse = await axios.get(url);
+        const propertyList = propertyResponse.data.properties.map(
           ({ property_id, name, location, price_per_night, image_url }) => ({
             id: property_id,
             name,
@@ -29,12 +29,13 @@ function PropertiesList() {
         );
         setProperties(propertyList);
         setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Error fetching properties:", err);
         setError("Something went wrong while fetching properties.");
         setLoading(false);
-      });
+      }
+    };
+    fetchProperties();
   }, [searchQuery]);
 
   if (loading) return <div>Loading properties...</div>;

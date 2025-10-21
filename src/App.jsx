@@ -12,14 +12,16 @@ function App() {
   const [selectedUser, setSelectedUser] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("/api/users/1")
-      .then((response) => {
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get("/api/users/1");
         setSelectedUser(response.data.user);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+      } catch (err) {
+        console.error("Error fetching user:", err);
+      }
+    };
+
+    fetchUser();
   }, []);
 
   return (

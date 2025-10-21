@@ -6,10 +6,16 @@ function PropertyTypeDDM({ selectedTypes, setSelectedTypes }) {
   const [propertyTypes, setPropertyTypes] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("/api/property-types")
-      .then((res) => setPropertyTypes(res.data.property_types))
-      .catch((err) => console.error("Error fetching property types:", err));
+    const fetchPropertyTypes = async () => {
+      try {
+        const propertyTypeResponse = await axios.get("/api/property-types");
+        setPropertyTypes(propertyTypeResponse.data.property_types);
+      } catch (err) {
+        console.error("Error fetching property types:", err);
+      }
+    };
+
+    fetchPropertyTypes();
   }, []);
 
   const handlePropertyTypeChange = (type) => {

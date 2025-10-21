@@ -16,22 +16,24 @@ function SingleProperty() {
   const [showReviews, setShowReviews] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(`/api/properties/${id}`)
-      .then((propertyResponse) => {
+    const fetchSinglePropertyAndReviews = async () => {
+      try {
+        const propertyResponse = await axios.get(`/api/properties/${id}`);
         setProperty(propertyResponse.data.property);
         setLoadingProperty(false);
 
-        return axios.get(`/api/properties/${id}/reviews`);
-      })
-      .then((reviewsResponse) => {
+        const reviewsResponse = await axios.get(
+          `/api/properties/${id}/reviews`
+        );
         const reviews = reviewsResponse.data.reviews;
 
-        const reviewsWithGuestData = reviews.map((review) => {
-          return axios
-            .get(`/api/users/${review.guest_id}`)
-            .then((userRes) => {
-              const updatedReview = {
+        const reviewsWithGuests = await Promise.all(
+          reviews.map(async (review) => {
+            try {
+              const userResponse = await axios.get(
+                `/api/users/${review.guest_id}`
+              );
+              return {
                 review_id: review.review_id,
                 property_id: review.property_id,
                 guest_id: review.guest_id,
@@ -39,32 +41,31 @@ function SingleProperty() {
                 comment: review.comment,
                 created_at: review.created_at,
                 guest: {
-                  user_id: userRes.data.user.user_id,
-                  first_name: userRes.data.user.first_name,
-                  surname: userRes.data.user.surname,
+                  user_id: userResponse.data.user.user_id,
+                  first_name: userResponse.data.user.first_name,
+                  surname: userResponse.data.user.surname,
+                  avatar: userResponse.data.user.avatar,
                 },
               };
-              return updatedReview;
-            })
-            .catch((err) => {
+            } catch (err) {
               console.error("Failed to fetch guest user:", err);
               return review;
-            });
-        });
+            }
+          })
+        );
 
-        return Promise.all(reviewsWithGuestData);
-      })
-      .then((reviewsWithGuests) => {
         setPropertyReviews(reviewsWithGuests);
         setLoadingPropertyReviews(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error(err);
         setErrorProperty("Failed to load property");
         setLoadingProperty(false);
         setErrorPropertyReviews("Failed to load reviews");
         setLoadingPropertyReviews(false);
-      });
+      }
+    };
+
+    fetchSinglePropertyAndReviews();
   }, [id]);
 
   if (loadingProperty || loadingPropertyReviews) return <div>Loading...</div>;
@@ -123,9 +124,17 @@ function SingleProperty() {
 
                   return (
                     <li key={review.review_id} className="review-item">
+                      <img
+                        src={review.guest.avatar}
+                        alt={guestName}
+                        className="property-user-avatar"
+                      />
                       <h4>{guestName}</h4>
-                      <h4>Rating: {review.rating}</h4>
+                      <h4>Rating: {"★".repeat(review.rating)}</h4>
                       <p>{review.comment}</p>
+                      <p className="review-date">
+                        {new Date(review.created_at).toLocaleDateString()}
+                      </p>
                     </li>
                   );
                 })}
