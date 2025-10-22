@@ -2,8 +2,9 @@ import { useParams, Link } from "react-router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../SingleProperty.css";
+import PropertyReviews from "./PropertyReviews";
 
-function SingleProperty() {
+function SingleProperty({ selectedUser }) {
   const { id } = useParams();
   const [property, setProperty] = useState({});
   const [loadingProperty, setLoadingProperty] = useState(true);
@@ -12,8 +13,6 @@ function SingleProperty() {
   const [propertyReviews, setPropertyReviews] = useState([]);
   const [loadingPropertyReviews, setLoadingPropertyReviews] = useState(true);
   const [errorPropertyReviews, setErrorPropertyReviews] = useState(null);
-
-  const [showReviews, setShowReviews] = useState(false);
 
   useEffect(() => {
     const fetchSinglePropertyAndReviews = async () => {
@@ -103,50 +102,12 @@ function SingleProperty() {
         </div>
       </div>
 
-      <div className="property-reviews">
-        <h3
-          style={{ cursor: "pointer" }}
-          onClick={() => setShowReviews(!showReviews)}
-        >
-          {showReviews ? "Hide Reviews" : "Show Reviews"}
-        </h3>
-
-        {showReviews ? (
-          <div>
-            {propertyReviews.length === 0 ? (
-              <p className="no-reviews">No reviews yet.</p>
-            ) : (
-              <ul>
-                {propertyReviews.map((review) => {
-                  const guestName = review.guest
-                    ? `${review.guest.first_name} ${review.guest.surname}`
-                    : "Unknown guest";
-
-                  return (
-                    <li key={review.review_id} className="review-item">
-                      <Link to={`/users/${review.guest_id}`}>
-                        <img
-                          src={review.guest.avatar}
-                          alt={guestName}
-                          className="property-user-avatar"
-                        />
-                      </Link>
-                      <div className="review-content">
-                        <h4>{guestName}</h4>
-                        <h4>Rating: {"★".repeat(review.rating)}</h4>
-                        <p>{review.comment}</p>
-                        <p className="review-date">
-                          {new Date(review.created_at).toLocaleDateString()}
-                        </p>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </div>
-        ) : null}
-      </div>
+      <PropertyReviews
+        reviews={propertyReviews}
+        setReviews={setPropertyReviews}
+        propertyId={property.property_id}
+        selectedUser={selectedUser}
+      />
     </div>
   );
 }

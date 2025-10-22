@@ -29,7 +29,10 @@ function App() {
       <Header selectedUser={selectedUser} />
       <Routes>
         <Route path="/" element={<PropertiesList />} />
-        <Route path="/properties/:id" element={<SingleProperty />} />
+        <Route
+          path="/properties/:id"
+          element={<SingleProperty selectedUser={selectedUser} />}
+        />
         <Route path="/users" element={<UsersList />} />
         <Route
           path="/users/:id"

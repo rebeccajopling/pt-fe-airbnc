@@ -113,8 +113,11 @@
   object-fit: cover;
 }
 
+.review-content p {
+  margin-top: 0.25rem;
+}
+
 .review-date {
-  margin-top: 0.5rem;
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
