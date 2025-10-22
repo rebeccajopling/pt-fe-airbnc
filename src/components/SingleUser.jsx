@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../SingleUser.css";
@@ -136,11 +136,13 @@ function SingleUser({ setSelectedUser }) {
               {userReviews.map((review) => (
                 <li key={review.review_id} className="user-review-item">
                   {review.property && (
-                    <img
-                      src={review.property.image_url}
-                      alt={review.property.name}
-                      className="review-image"
-                    />
+                    <Link to={`/properties/${review.property.property_id}`}>
+                      <img
+                        src={review.property.image_url}
+                        alt={review.property.name}
+                        className="review-image"
+                      />
+                    </Link>
                   )}
                   <div className="review-content">
                     <h4>Rating: {"★".repeat(review.rating)}</h4>

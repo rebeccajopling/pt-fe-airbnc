@@ -129,8 +129,8 @@
 .review-item,
 .no-reviews {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  gap: 1rem;
   border-top: 1.5px solid #ceefee;
   padding: 1rem 0;
   margin: 0.25rem 0;
@@ -141,6 +141,13 @@
 
 .review-item:last-child {
   border-bottom: 1.5px solid #ceefee;
+}
+
+.review-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 480px) {
@@ -193,5 +200,9 @@
   .property-reviews {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .review-item {
+    align-items: flex-start;
   }
 }

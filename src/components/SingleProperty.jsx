@@ -124,17 +124,21 @@ function SingleProperty() {
 
                   return (
                     <li key={review.review_id} className="review-item">
-                      <img
-                        src={review.guest.avatar}
-                        alt={guestName}
-                        className="property-user-avatar"
-                      />
-                      <h4>{guestName}</h4>
-                      <h4>Rating: {"★".repeat(review.rating)}</h4>
-                      <p>{review.comment}</p>
-                      <p className="review-date">
-                        {new Date(review.created_at).toLocaleDateString()}
-                      </p>
+                      <Link to={`/users/${review.guest_id}`}>
+                        <img
+                          src={review.guest.avatar}
+                          alt={guestName}
+                          className="property-user-avatar"
+                        />
+                      </Link>
+                      <div className="review-content">
+                        <h4>{guestName}</h4>
+                        <h4>Rating: {"★".repeat(review.rating)}</h4>
+                        <p>{review.comment}</p>
+                        <p className="review-date">
+                          {new Date(review.created_at).toLocaleDateString()}
+                        </p>
+                      </div>
                     </li>
                   );
                 })}
