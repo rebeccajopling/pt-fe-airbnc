@@ -2,33 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router";
 import axios from "axios";
 import AddReview from "./AddReview";
+import DeleteReview from "./DeleteReview";
 
 function PropertyReviews({ reviews, setReviews, propertyId, selectedUser }) {
   const [showReviews, setShowReviews] = useState(false);
-
-  async function deleteReview(reviewId) {
-    try {
-      await axios.delete(`/api/reviews/${reviewId}`);
-      setReviews((prev) => prev.filter((r) => r.review_id !== reviewId));
-    } catch (err) {
-      console.error("Failed to delete review:", err);
-    }
-  }
-
-  function renderDeleteReviewButton(review) {
-    const isCurrentUser = selectedUser?.user_id === review.guest_id;
-    if (isCurrentUser) {
-      return (
-        <button
-          onClick={() => deleteReview(review.review_id)}
-          className="delete-review-button"
-        >
-          Delete
-        </button>
-      );
-    }
-    return null;
-  }
 
   function renderReviewItem(review) {
     const guestName = review.guest
@@ -51,7 +28,12 @@ function PropertyReviews({ reviews, setReviews, propertyId, selectedUser }) {
           <p className="review-date">
             {new Date(review.created_at).toLocaleDateString()}
           </p>
-          {renderDeleteReviewButton(review)}
+          <DeleteReview
+            reviewId={review.review_id}
+            guestId={review.guest_id}
+            currentUserId={selectedUser?.user_id}
+            setReviews={setReviews}
+          />
         </div>
       </li>
     );
