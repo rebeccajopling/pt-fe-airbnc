@@ -8,13 +8,17 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 
 ### Live Site
 
-<div style="border-bottom: 2px solid #08342f; margin-bottom: 10px;"></div>
+<p align="center">
+  <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
+</p>
 
 🔗 <INSERT LINK>
 
 ### Key Features
 
-<div style="border-bottom: 2px solid #08342f; margin-bottom: 10px;"></div>
+<p align="center">
+  <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
+</p>
 
 - Browse all available property listings
 - Filter property listings by property type or a specific price range
@@ -27,7 +31,9 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 
 ### Tech Stack
 
-<div style="border-bottom: 2px solid #08342f; margin-bottom: 10px;"></div>
+<p align="center">
+  <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
+</p>
 
 - Javascript
 - React and React Router
@@ -37,7 +43,9 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 
 ### Getting Started
 
-<div style="border-bottom: 2px solid #08342f; margin-bottom: 10px;"></div>
+<p align="center">
+  <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
+</p>
 
 To run this project locally:
 
