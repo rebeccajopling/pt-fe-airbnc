@@ -6,7 +6,7 @@ AirBnC is the front-end interface of a full-stack property booking application, 
 
 The design is mobile-first and fully responsive, ensuring a seamless experience across all devices.
 
-### Live Site
+#### Live Site
 
 <p align="center">
   <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
@@ -14,7 +14,7 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 
 🔗 <INSERT LINK>
 
-### Key Features
+#### Key Features
 
 <p align="center">
   <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
@@ -29,7 +29,7 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 - Add reviews for properties as a selected user
 - Delete reviews for properties if review is left by selected user
 
-### Tech Stack
+#### Tech Stack
 
 <p align="center">
   <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
@@ -41,7 +41,7 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 - Supabase (database)
 - RESTful API (custom airbnc backend, deployed on Render)
 
-### Getting Started
+#### Getting Started
 
 <p align="center">
   <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
