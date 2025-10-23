@@ -13,8 +13,6 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 
 ---
 
-<br>
-
 - Browse all available property listings
 - Filter property listings by property type or a specific price range
 - Sort property listings by price (low-high/high-low)
@@ -30,8 +28,6 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 
 ---
 
-<br>
-
 - Javascript
 - React and React Router
 - CSS
@@ -43,8 +39,6 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 #### Getting Started
 
 ---
-
-<br>
 
 To run this project locally:
 
@@ -58,7 +52,5 @@ npm run dev
 #### Live Site
 
 ---
-
-<br>
 
 🔗 <INSERT LINK>
