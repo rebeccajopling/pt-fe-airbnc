@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
-import axios from "axios";
 import AddReview from "./AddReview";
 import DeleteReview from "./DeleteReview";
 
