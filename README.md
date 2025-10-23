@@ -1,12 +1,39 @@
-# React + Vite
+<p align="center">
+  <img src="./assets/airbnc_banner.png" alt="airbnc banner" width="1000"/>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AirBnC is the front-end interface of a full-stack property booking application, connected to a custom backend API. It allows users to browse and review various properties, with the ability to switch between different demo user accounts.
 
-Currently, two official plugins are available:
+The design is mobile-first and fully responsive, ensuring a seamless experience across all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Site
 
-## Expanding the ESLint configuration
+🔗 <INSERT LINK>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Features
+
+- Browse all available property listings
+- Filter property listings by property type or a specific price range
+- Sort property listings by price (low-high/high-low)
+- View property details and reviews
+- Browse all available user profiles and change selected user
+- View user profiles and see which properties are associated with a user (if a host) or which reviews are associated with a user (if not a host)
+- Add reviews for properties as a selected user
+- Delete reviews for properties if review is left by selected user
+
+## Tech Stack
+
+- Javascript
+- React and React Router
+- CSS
+- Supabase (database)
+- RESTful API (custom airbnc backend, deployed on Render)
+
+## Getting Started
+
+To run this project locally:
+
+```sh
+npm install
+npm run dev
+```
