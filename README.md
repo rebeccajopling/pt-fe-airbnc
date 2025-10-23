@@ -2,23 +2,18 @@
   <img src="./src/assets/airbnc_banner.png" alt="airbnc banner" width="1000"/>
 </p>
 
+<br>
 AirBnC is the front-end interface of a full-stack property booking application, connected to a custom backend API. It allows users to browse and review various properties, with the ability to switch between different demo user accounts.
 
 The design is mobile-first and fully responsive, ensuring a seamless experience across all devices.
-
-#### Live Site
-
-<p align="center">
-  <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
-</p>
-
-🔗 <INSERT LINK>
+<br>
+<br>
 
 #### Key Features
 
-<p align="center">
-  <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
-</p>
+---
+
+<br>
 
 - Browse all available property listings
 - Filter property listings by property type or a specific price range
@@ -29,11 +24,13 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 - Add reviews for properties as a selected user
 - Delete reviews for properties if review is left by selected user
 
+<br>
+
 #### Tech Stack
 
-<p align="center">
-  <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
-</p>
+---
+
+<br>
 
 - Javascript
 - React and React Router
@@ -41,11 +38,13 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 - Supabase (database)
 - RESTful API (custom airbnc backend, deployed on Render)
 
+<br>
+
 #### Getting Started
 
-<p align="center">
-  <img src="./src/assets/airbnc_stroke.png" alt="airbnc stroke" width="1000"/>
-</p>
+---
+
+<br>
 
 To run this project locally:
 
@@ -53,3 +52,13 @@ To run this project locally:
 npm install
 npm run dev
 ```
+
+<br>
+
+#### Live Site
+
+---
+
+<br>
+
+🔗 <INSERT LINK>
