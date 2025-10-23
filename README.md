@@ -3,10 +3,7 @@
 </p>
 
 <br>
-AirBnC is the front-end interface of a full-stack property booking application, connected to a custom backend API. It allows users to browse and review various properties, with the ability to switch between different demo user accounts.
-
-The design is mobile-first and fully responsive, ensuring a seamless experience across all devices.
-<br>
+AirBnC is the front-end interface of a full-stack property booking application, connected to a custom backend API. It allows users to browse and review various properties, with the ability to switch between different demo user accounts. The design is mobile-first and fully responsive, ensuring a seamless experience across all devices.
 <br>
 
 #### Key Features
@@ -21,8 +18,7 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 - View user profiles and see which properties are associated with a user (if a host) or which reviews are associated with a user (if not a host)
 - Add reviews for properties as a selected user
 - Delete reviews for properties if review is left by selected user
-
-<br>
+  <br>
 
 #### Tech Stack
 
@@ -33,7 +29,13 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 - CSS
 - Supabase (database)
 - RESTful API (custom airbnc backend, deployed on Render)
+  <br>
 
+#### Live Site
+
+---
+
+🔗 <INSERT LINK>
 <br>
 
 #### Getting Started
@@ -46,11 +48,3 @@ To run this project locally:
 npm install
 npm run dev
 ```
-
-<br>
-
-#### Live Site
-
----
-
-🔗 <INSERT LINK>
