@@ -8,9 +8,13 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 
 ### Live Site
 
+<div style="border-bottom: 2px solid #08342f; margin-bottom: 10px;"></div>
+
 🔗 <INSERT LINK>
 
 ### Key Features
+
+<div style="border-bottom: 2px solid #08342f; margin-bottom: 10px;"></div>
 
 - Browse all available property listings
 - Filter property listings by property type or a specific price range
@@ -23,6 +27,8 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 
 ### Tech Stack
 
+<div style="border-bottom: 2px solid #08342f; margin-bottom: 10px;"></div>
+
 - Javascript
 - React and React Router
 - CSS
@@ -30,6 +36,8 @@ The design is mobile-first and fully responsive, ensuring a seamless experience 
 - RESTful API (custom airbnc backend, deployed on Render)
 
 ### Getting Started
+
+<div style="border-bottom: 2px solid #08342f; margin-bottom: 10px;"></div>
 
 To run this project locally:
 
