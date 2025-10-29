@@ -1,12 +1,13 @@
 <p align="center">
-  <img src="./src/assets/airbnc_banner.png" alt="airbnc banner" width="1000"/>
+  <img src="./src/assets/airbnc_banner_fe.png" alt="airbnc banner" width="1000"/>
 </p>
 
-<br>
-AirBnC is the front-end interface of a full-stack property booking application, connected to a custom backend API. It allows users to browse and review various properties, with the ability to switch between different demo user accounts. The design is mobile-first and fully responsive, ensuring a seamless experience across all devices.
+AirBnC is the front end interface of a full stack property booking application, connected to a back end API: [pt-be-airbnc](https://github.com/rebeccajopling/pt-be-airbnc)
+
+It allows users to browse and review various properties, with the ability to switch between different demo user accounts. The design is mobile-first and fully responsive, ensuring a seamless experience across all devices.
 <br>
 
-#### Key Features
+### Key Features
 
 ---
 
@@ -20,7 +21,7 @@ AirBnC is the front-end interface of a full-stack property booking application, 
 - Delete reviews for properties if review is left by selected user
   <br>
 
-#### Tech Stack
+### Tech Stack
 
 ---
 
@@ -31,14 +32,14 @@ AirBnC is the front-end interface of a full-stack property booking application, 
 - RESTful API (custom airbnc backend, deployed on Render)
   <br>
 
-#### Live Site
+### Live Site
 
 ---
 
 🔗 <INSERT LINK>
 <br>
 
-#### Getting Started
+### Getting Started
 
 ---
 
