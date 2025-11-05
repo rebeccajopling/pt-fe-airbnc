@@ -35,37 +35,46 @@ function AddReview({ propertyId, selectedUser, onReviewSubmit }) {
   };
 
   return (
-    <form className="review-form" onSubmit={handleSubmit}>
-      <div className="rating-buttons">
-        <p>Select Rating:</p>
-        {[1, 2, 3, 4, 5].map((star) => (
-          <button
-            key={star}
-            type="button"
-            onClick={() => setRating(star)}
-            className={star <= rating ? "star selected" : "star"}
-          >
-            ★
+    <form className="add-review-item" onSubmit={handleSubmit}>
+      <img
+        src={selectedUser?.avatar}
+        alt={`${selectedUser?.first_name} ${selectedUser?.surname}`}
+        className="property-user-avatar"
+      />
+      <div className="review-content">
+        <h4>
+          {selectedUser.first_name} {selectedUser.surname}
+        </h4>
+        <div className="select-rating">
+          <h4>Select Rating:&nbsp;</h4>
+          <div className="stars">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <button
+                key={star}
+                type="button"
+                onClick={() => setRating(star)}
+                className={star <= rating ? "star selected" : "star"}
+              >
+                ★
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <textarea
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            placeholder="Write a review..."
+            required
+          />
+        </div>
+
+        <div>
+          <button type="submit" style={{ cursor: "pointer" }}>
+            Submit
           </button>
-        ))}
-      </div>
-
-      <div>
-        <img
-          src={selectedUser?.avatar}
-          alt={`${selectedUser?.first_name} ${selectedUser?.surname}`}
-          className="property-user-avatar"
-        />
-        <textarea
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-          placeholder="Write a review..."
-          required
-        />
-      </div>
-
-      <div>
-        <button type="submit">Submit</button>
+        </div>
       </div>
     </form>
   );

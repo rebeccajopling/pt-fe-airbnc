@@ -111,12 +111,12 @@ function SingleUser({ setSelectedUser }) {
                     {property.location} &nbsp;&middot;&nbsp; £
                     {property.price_per_night} per night
                   </p>
-                  <a
-                    href={`/properties/${property.property_id}`}
+                  <Link
+                    to={`/properties/${property.property_id}`}
                     className="property-view"
                   >
                     View Property
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

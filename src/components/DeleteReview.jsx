@@ -17,7 +17,11 @@ function DeleteReview({ reviewId, guestId, currentUserId, setReviews }) {
   };
 
   return (
-    <button onClick={deleteReview} className="delete-review-button">
+    <button
+      onClick={deleteReview}
+      style={{ cursor: "pointer" }}
+      className="delete-review-button"
+    >
       Delete
     </button>
   );

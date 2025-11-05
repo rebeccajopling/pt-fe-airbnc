@@ -78,10 +78,10 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 110%;
-  color: black;
+  top: 105%;
+  color: #2e4845;
   background-color: #f4f2ee;
-  border-radius: 17.5px;
+  border-radius: 12.5px;
   padding: 25px;
   min-width: 200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
