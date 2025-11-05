@@ -7,6 +7,13 @@ AirBnC is the front end interface of a full stack property booking application, 
 It allows users to browse and review various properties, with the ability to switch between different demo user accounts. The design is mobile-first and fully responsive, ensuring a seamless experience across all devices.
 <br>
 
+### Live Site
+
+---
+
+🔗 <INSERT LINK>
+[AirBnC Live Site](https://airbnc-rj.netlify.app/)
+
 ### Key Features
 
 ---
@@ -31,13 +38,6 @@ It allows users to browse and review various properties, with the ability to swi
 - Supabase (database)
 - RESTful API (custom airbnc backend, deployed on Render)
   <br>
-
-### Live Site
-
----
-
-🔗 <INSERT LINK>
-<br>
 
 ### Getting Started
 
