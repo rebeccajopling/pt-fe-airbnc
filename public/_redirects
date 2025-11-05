@@ -1,1 +1,2 @@
-/* /https://airbnc-ez73.onrender.com/ 200
+/api/*  https://airbnc-ez73.onrender.com/api/:splat  200
+/*      /index.html                      200
