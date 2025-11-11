@@ -83,12 +83,14 @@ function PropertyReviews({ reviews, setReviews, propertyId, selectedUser }) {
 
   return (
     <div className="property-reviews">
-      <h3
-        style={{ cursor: "pointer" }}
-        onClick={() => setShowReviews(!showReviews)}
-      >
-        {showReviews ? "Hide Reviews" : "Show Reviews"}
-      </h3>
+      <div className="property-reviews-h3-wrapper">
+        <h3
+          style={{ cursor: "pointer" }}
+          onClick={() => setShowReviews(!showReviews)}
+        >
+          {showReviews ? "Hide Reviews" : "Show Reviews"}
+        </h3>
+      </div>
 
       {renderReviewsSection()}
 

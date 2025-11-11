@@ -84,12 +84,12 @@ function SingleUser({ setSelectedUser }) {
   return (
     <div className="single-user">
       <div className="single-user-info-box">
-        <div className="user-info">
+        <div className="single-user-info">
           <h2>
             {user.first_name} {user.surname}
           </h2>
-          <p>Email: {user.email}</p>
-          <p>Phone: {user.phone_number}</p>
+          <p>{user.email}</p>
+          <p>{user.phone_number}</p>
         </div>
         <img
           src={user.avatar}
@@ -124,12 +124,16 @@ function SingleUser({ setSelectedUser }) {
         </div>
       ) : userReviews.length > 0 ? (
         <div className="user-reviews-section">
-          <h3
-            style={{ cursor: "pointer" }}
-            onClick={() => setShowUserReviews(!showUserReviews)}
-          >
-            {showUserReviews ? `Hide Reviews` : `${user.first_name}'s Reviews`}
-          </h3>
+          <div className="user-reviews-h3-wrapper">
+            <h3
+              style={{ cursor: "pointer" }}
+              onClick={() => setShowUserReviews(!showUserReviews)}
+            >
+              {showUserReviews
+                ? `Hide Reviews`
+                : `${user.first_name}'s Reviews`}
+            </h3>
+          </div>
 
           {showUserReviews ? (
             <ul className="reviews-list">
